@@ -65,7 +65,7 @@ export default function TopNav() {
               <span className="px-2 font-medium text-[15px]">Upload</span>
             </button>
             <div className="flex items-center">
-              {true ? (
+              {!true ? (
                 <div>
                   <button
                     className="mt-1 border border-gray-200 rounded-full"

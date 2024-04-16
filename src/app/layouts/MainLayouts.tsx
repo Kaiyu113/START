@@ -1,5 +1,6 @@
 import { usePathname } from "next/navigation";
 import TopNav from "./includes/TopNav";
+import SideNavMain from "./includes/SideNavMain";
 export default function MainLayouts({
   children,
 }: {
@@ -16,6 +17,7 @@ export default function MainLayouts({
         }
         }`}
       >
+        <SideNavMain />
         {children}
       </div>
     </>
