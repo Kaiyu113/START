@@ -1,7 +1,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import ManuItem from "./MenuItem";
-import ManuItemFollow from "./ManuItemFollow";
+import ManuItemFollow from "./MenuItemFollow";
 import ClientOnly from "@/app/components/ClientOnly";
 
 export default function SideNavMain() {
@@ -10,13 +10,23 @@ export default function SideNavMain() {
     <>
       <div
         id="SideNavMain"
-        className="fixed z-20 bg-white pt-[70px] h-full w-[200px] lg:border-r-0 border-r overflow-auto ${pathname === '/' ? 'lg:w-[310px]' : 'lg:w-[220px]'}"
+        className={`fixed z-20 bg-white pt-[70px] h-full w-[75px] lg:border-r-0 border-r overflow-auto ${
+          pathName === "/" ? "lg:w-[310px]" : "lg:w-[220px]"
+        }`}
       >
         <div className="lg:w-full w-[55px] mx-auto">
           <Link href="/">
-            <ManuItem iconstr="For You" colorstr="black" sizestr="25" />
-            <ManuItem iconstr="Following" colorstr="black" sizestr="25" />
-            <ManuItem iconstr="LIVE" colorstr="red" sizestr="25" />
+            <ManuItem
+              iconString="For You"
+              colorString="black"
+              sizeString="25"
+            />
+            <ManuItem
+              iconString="Following"
+              colorString="black"
+              sizeString="25"
+            />
+            <ManuItem iconString="LIVE" colorString="red" sizeString="25" />
           </Link>
           <div className="border-b lg:ml-2 mt-2" />
           <h3 className="lg:block hidden text-xs text-gray-600 font-semibold pt-4 pb-2 px-2">

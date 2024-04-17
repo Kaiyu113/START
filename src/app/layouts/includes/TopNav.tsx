@@ -1,6 +1,5 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
 import { BiSearch, BiUser } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
