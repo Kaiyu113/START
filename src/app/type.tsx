@@ -1,8 +1,23 @@
-export interface MenuItemFollowCompTypes {
+export type MenuItemFollowCompTypes = {
   user: RandomUsers;
+};
+
+export interface User {
+  id: string;
+  name: string;
+  bio: string;
+  image: string;
 }
 
-export interface PostWithProfile {
+export interface Post {
+  id: string;
+  user_id: string;
+  video_url: string;
+  text: string;
+  created_at: string;
+}
+
+export type PostWithProfile = {
   id: string;
   user_id: string;
   video_url: string;
@@ -13,31 +28,53 @@ export interface PostWithProfile {
     name: string;
     image: string;
   };
-}
+};
 
-export interface Like {
+export type UploadError = {
+  type: string;
+  message: string;
+};
+
+export type Comment = {
+  id: string;
+  user_id: string;
+  post_id: string;
+  text: string;
+  created_at: string;
+};
+
+export type Like = {
   id: string;
   user_id: string;
   image: string;
-}
+};
 
-export interface RandomUsers {
+export type RandomUsers = {
   id: string;
   name: string;
-  post_id: string;
-}
+  post_id?: string;
+  image?: string;
+};
 //component type
-export interface PostMainCompTypes {
+export type PostMainCompTypes = {
   post: PostWithProfile;
-}
+};
 
-export interface PostMainLikeCompTypes {
+export type PostMainLikeCompTypes = {
   post: PostWithProfile;
-}
+};
 
 // LAYOUT INCLUDE TYPES
-export interface MenuItemTypes {
+export type MenuItemTypes = {
   iconString: string;
   colorString: string;
   sizeString: string;
+};
+
+export interface ProfilePageTypes {
+  params: { id: string };
+}
+
+export interface PostUserCompTypes {
+  post: Post;
 }

@@ -4,14 +4,16 @@ import { BiSearch, BiUser } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FiLogOut } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 export default function TopNav() {
   const pathName = usePathname();
+  const router = useRouter();
   const handleSearchInput = (e: { target: { value: string } }) => {
     console.log(e.target.value);
   };
-  const goTo = () => {
-    console.log("here");
+  const goTo = (path: string) => {
+    router.push(path);
   };
   return (
     <>
@@ -58,7 +60,7 @@ export default function TopNav() {
           <div className="flex items-center gap-3">
             <button
               className="flex items-center border rounded-sm py-[6px] hover:bg-gray-100 pl-1.5"
-              onClick={() => goTo()}
+              onClick={() => goTo("/upload")}
             >
               <AiOutlinePlus color="#000000" size="22" />
               <span className="px-2 font-medium text-[15px]">Upload</span>
@@ -68,7 +70,7 @@ export default function TopNav() {
                 <div>
                   <button
                     className="mt-1 border border-gray-200 rounded-full"
-                    onClick={() => goTo()}
+                    onClick={() => goTo("/Profile")}
                   >
                     <img
                       className="rounded-full w-[35px] h-[35px]"
@@ -93,7 +95,7 @@ export default function TopNav() {
               ) : (
                 <button
                   className="flex items-center bg-[#F02C56] text-white border rounded-sm py-[6px]"
-                  onClick={() => goTo()}
+                  onClick={() => goTo("/Login")}
                 >
                   <span className="whitespace-nowrap mx-4 font-medium text-[16px]">
                     Log in

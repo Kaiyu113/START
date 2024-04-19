@@ -11,7 +11,7 @@ export default function SideNavMain() {
       <div
         id="SideNavMain"
         className={`fixed z-20 bg-white pt-[70px] h-full w-[75px] lg:border-r-0 border-r overflow-auto ${
-          pathName === "/" ? "lg:w-[310px]" : "lg:w-[220px]"
+          pathName === "/" ? "lg:w-[280px]" : "lg:w-[220px]"
         }`}
       >
         <div className="lg:w-full w-[55px] mx-auto">
@@ -34,7 +34,12 @@ export default function SideNavMain() {
           </h3>
           <ClientOnly>
             <ManuItemFollow
-              user={{ id: "1", name: "user1", image: "/image/favicson.png" }}
+              user={{
+                id: "1",
+                post_id: "123",
+                name: "user1",
+                image: "/image/favicson.png",
+              }}
             />
           </ClientOnly>
           <button className="lg:block hidden text-[#F02C56] pt-1.5 pl-2 text-[13px]">
@@ -53,8 +58,8 @@ export default function SideNavMain() {
                   <ManuItemFollow
                     user={{
                       id: "1",
+                      post_id: "string",
                       name: "user1",
-                      image: "/image/favicson.png",
                     }}
                   />
                 </div>
@@ -67,16 +72,16 @@ export default function SideNavMain() {
           ) : null}
           <div className="lg:block hidden text-[11px] text-gray-500">
             <p className="pt-4 px-2">
-              About Newsroom TikTok Shop Contact Careers ByteDance
+              About Newsroom KaiyuPOP Shop Contact Careers AiryCrow
             </p>
             <p className="pt-4 px-2">
-              TikTok for Good Advertise Developers Transparency TikTok Rewards
-              TikTok Browse TikTok Embeds
+              AiryCrow for Good Advertise Developers Transparency AiryCrow
+              Rewards AiryCrow Browse AiryCrow Embeds
             </p>
             <p className="pt-4 px-2">
               Help Safety Terms Privacy Creator Portal Community Guidelines
             </p>
-            <p className="pt-4 px-2">© 2023 TikTok</p>
+            <p className="pt-4 px-2">© 2023 AiryCrow</p>
           </div>
         </div>
       </div>
