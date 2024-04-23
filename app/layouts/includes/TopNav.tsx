@@ -1,5 +1,6 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useGeneralStore } from "../../stores/general";
 import { BiSearch, BiUser } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -7,6 +8,8 @@ import { FiLogOut } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 
 export default function TopNav() {
+  let { setIsLoginOpen } = useGeneralStore();
+
   const pathName = usePathname();
   const router = useRouter();
   const handleSearchInput = (e: { target: { value: string } }) => {
@@ -95,7 +98,7 @@ export default function TopNav() {
               ) : (
                 <button
                   className="flex items-center bg-[#F02C56] text-white border rounded-sm py-[6px]"
-                  onClick={() => goTo("/Login")}
+                  onClick={() => setIsLoginOpen(true)}
                 >
                   <span className="whitespace-nowrap mx-4 font-medium text-[16px]">
                     Log in

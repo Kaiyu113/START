@@ -2,7 +2,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import ManuItem from "./MenuItem";
 import ManuItemFollow from "./MenuItemFollow";
-import ClientOnly from "@/app/components/ClientOnly";
+import ClientOnly from "../../components/ClientOnly";
 
 export default function SideNavMain() {
   const pathName = usePathname();

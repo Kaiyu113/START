@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import AllOverlays from "./components/AllOverlay";
+import UserProvider from "./context/user";
 export const metadata: Metadata = {
   title: "ACVERSE",
   description: "ACVERSE",
@@ -13,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <UserProvider>
+          <AllOverlays />
+          {children}
+        </UserProvider>
+      </body>
     </html>
   );
 }

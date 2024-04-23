@@ -4,7 +4,7 @@ import PostUser from "../components/profile/PostUser";
 import MainLayout from "../layouts/MainLayouts";
 import { BsPencil } from "react-icons/bs";
 import { useEffect } from "react";
-import ClientOnly from "@/app/components/ClientOnly";
+import ClientOnly from "../components/ClientOnly";
 import { ProfilePageTypes, User } from "../type";
 
 export default function Profile({ params }: ProfilePageTypes) {

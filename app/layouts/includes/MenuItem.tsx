@@ -3,7 +3,7 @@
 import { AiOutlineHome } from "react-icons/ai";
 import { RiGroupLine } from "react-icons/ri";
 import { BsCameraVideo } from "react-icons/bs";
-import { MenuItemTypes } from "@/app/type";
+import { MenuItemTypes } from "../../type";
 export default function MenuItem({
   iconString,
   colorString,
