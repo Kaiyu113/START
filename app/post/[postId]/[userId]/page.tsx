@@ -8,7 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 import ClientOnly from "@/app/components/ClientOnly";
-import { Post, PostPageTypes } from "@/app/types";
+import { PostPageTypes } from "@/app/types";
 import { usePostStore } from "@/app/stores/post";
 import { useLikeStore } from "@/app/stores/like";
 import { useCommentStore } from "@/app/stores/comment";
@@ -62,14 +62,22 @@ export default function Post({ params }: PostPageTypes) {
               onClick={() => loopThroughPostsUp()}
               className="absolute z-20 right-4 top-4 flex items-center justify-center rounded-full bg-gray-700 p-1.5 hover:bg-gray-800"
             >
-              <BiChevronUp size="30" color="#FFFFFF" />
+              <BiChevronUp
+                size="30"
+                color="#f37fb2
+"
+              />
             </button>
 
             <button
               onClick={() => loopThroughPostsDown()}
               className="absolute z-20 right-4 top-20 flex items-center justify-center rounded-full bg-gray-700 p-1.5 hover:bg-gray-800"
             >
-              <BiChevronDown size="30" color="#FFFFFF" />
+              <BiChevronDown
+                size="30"
+                color="#f37fb2
+"
+              />
             </button>
           </div>
           <img

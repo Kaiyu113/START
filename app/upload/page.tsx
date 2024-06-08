@@ -124,7 +124,7 @@ export default function Upload() {
                 <p className="mt-2 text-gray-400 text-[13px]">Less than 2 GB</p>
                 <label
                   htmlFor="fileInput"
-                  className="px-2 py-1.5 mt-8 text-white text-[15px] w-[80%] bg-[#F02C56] rounded-sm cursor-pointer"
+                  className="px-2 py-1.5 mt-8 text-white text-[15px] w-[80%] bg-[#f37fb2] rounded-sm cursor-pointer"
                 >
                   Select file
                 </label>
@@ -219,7 +219,7 @@ export default function Upload() {
                   </div>
                 </div>
                 <div className="flex justify-end max-w-[130px] w-full h-full text-center my-auto">
-                  <button className="px-8 py-1.5 text-white text-[15px] bg-[#F02C56] rounded-sm">
+                  <button className="px-8 py-1.5 text-white text-[15px] bg-[#f37fb2] rounded-sm">
                     Edit
                   </button>
                 </div>
@@ -258,12 +258,13 @@ export default function Upload() {
                 <button
                   disabled={isUploading}
                   onClick={() => createNewPost()}
-                  className="px-10 py-2.5 mt-8 border text-[16px] text-white bg-[#F02C56] rounded-sm"
+                  className="px-10 py-2.5 mt-8 border text-[16px] text-white bg-[#f37fb2] rounded-sm"
                 >
                   {isUploading ? (
                     <BiLoaderCircle
                       className="animate-spin"
-                      color="#ffffff"
+                      color="#f37fb2
+"
                       size={25}
                     />
                   ) : (

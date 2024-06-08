@@ -29,7 +29,7 @@ export default function SideNavMain() {
           <Link href="/">
             <MenuItem
               iconString="For You"
-              colorString={pathname == "/" ? "#F02C56" : ""}
+              colorString={pathname == "/" ? "#f37fb2" : ""}
               sizeString="25"
             />
           </Link>
@@ -54,7 +54,7 @@ export default function SideNavMain() {
             </div>
           </ClientOnly>
 
-          <button className="lg:block hidden text-[#F02C56] pt-1.5 pl-2 text-[13px]">
+          <button className="lg:block hidden text-[#f37fb2] pt-1.5 pl-2 text-[13px]">
             See all
           </button>
 
@@ -74,7 +74,7 @@ export default function SideNavMain() {
                 </div>
               </ClientOnly>
 
-              <button className="lg:block hidden text-[#F02C56] pt-1.5 pl-2 text-[13px]">
+              <button className="lg:block hidden text-[#f37fb2] pt-1.5 pl-2 text-[13px]">
                 See more
               </button>
             </div>

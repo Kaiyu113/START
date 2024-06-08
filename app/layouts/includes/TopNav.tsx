@@ -65,7 +65,7 @@ export default function TopNav() {
             />
           </Link>
 
-          <div className="relative hidden md:flex items-center justify-end bg-[#F1F1F2] p-1 rounded-full max-w-[430px] w-full">
+          <div className="relative hidden md:flex items-center justify-end bg-[#F1F1F2] p-1 rounded-lg max-w-[430px] w-full">
             <input
               type="text"
               onChange={handleSearchName}
@@ -113,7 +113,7 @@ export default function TopNav() {
               <div className="flex items-center">
                 <button
                   onClick={() => setIsLoginOpen(true)}
-                  className="flex items-center bg-[#F02C56] text-white border rounded-md px-3 py-[6px]"
+                  className="flex items-center bg-[#f37fb2] text-white border rounded-md px-3 py-[6px]"
                 >
                   <span className="whitespace-nowrap mx-4 font-medium text-[15px]">
                     Log in
