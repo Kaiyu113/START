@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { PostMainCompTypes } from "../type";
-import Link from "next/link";
-import { ImMusic } from "react-icons/im";
 import { AiFillHeart } from "react-icons/ai";
-import PostMainLike from "./PostMainLike";
+import { ImMusic } from "react-icons/im";
+import Link from "next/link";
+import { useEffect } from "react";
+import PostMainLikes from "./PostMainLikes";
+import useCreateBucketUrl from "../hooks/useCreateBucketUrl";
+import { PostMainCompTypes } from "../types";
 
 export default function PostMain({ post }: PostMainCompTypes) {
   useEffect(() => {
-    //when ever video enter the feed it will play, when it not it will stop
     const video = document.getElementById(
       `video-${post?.id}`
     ) as HTMLVideoElement;
@@ -25,18 +25,19 @@ export default function PostMain({ post }: PostMainCompTypes) {
 
       observer.observe(postMainElement);
     }
-  });
+  }, []);
+
   return (
     <>
       <div id={`PostMain-${post.id}`} className="flex border-b py-6">
         <div className="cursor-pointer">
-          {" "}
           <img
             className="rounded-full max-h-[60px]"
             width="60"
-            src={post?.profile?.image}
+            src={useCreateBucketUrl(post?.profile?.image)}
           />
         </div>
+
         <div className="pl-3 w-full px-4">
           <div className="flex items-center justify-between pb-0.5">
             <Link href={`/profile/${post.profile.user_id}`}>
@@ -69,17 +70,18 @@ export default function PostMain({ post }: PostMainCompTypes) {
                 controls
                 muted
                 className="rounded-xl object-cover mx-auto h-full"
-                src={post?.video_url}
+                src={useCreateBucketUrl(post?.video_url)}
               />
-              <img
+              {/* <img
                 className="absolute right-2 bottom-10"
                 width="90"
-                src="/image/vercel.svg"
-              />
+                src="/images/START-watermark.png"
+              /> */}
             </div>
+
+            <PostMainLikes post={post} />
           </div>
         </div>
-        <PostMainLike post={post} />
       </div>
     </>
   );

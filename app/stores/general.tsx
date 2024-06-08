@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, devtools, createJSONStorage } from "zustand/middleware";
-import { RandomUsers } from "../type";
+import { RandomUsers } from "../types";
 import useGetRandomUsers from "../hooks/useGetRandomUsers";
 
 interface GeneralStore {

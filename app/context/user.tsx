@@ -7,8 +7,9 @@ import React, {
   useEffect,
   ReactNode,
 } from "react";
-import { account, ID } from "../../libs/AppWriteClient";
-import { User, UserContextTypes } from "../type";
+import { account, ID } from "@/libs/AppWriteClient";
+
+import { User, UserContextTypes } from "../types";
 import { useRouter } from "next/navigation";
 import useGetProfileByUserId from "../hooks/useGetProfileByUserId";
 import useCreateProfile from "../hooks/useCreateProfile";
@@ -86,12 +87,6 @@ const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   );
 };
 
-export const useUser = () => {
-  console.log("useUser");
-  console.log(UserContext);
-  console.log(useContext(UserContext));
-  console.log("useUser");
-
-  return useContext(UserContext);
-};
 export default UserProvider;
+
+export const useUser = () => useContext(UserContext);
